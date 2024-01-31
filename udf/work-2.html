@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const pi=3.14
+
+    let j=parseInt (prompt("enter j:"));
+
+    let circle = (j) => pi*j*j
+    document.write('<br> Area of Cirlce :', circle(j));
+
+    let length=parseInt(prompt("enter length"));
+    let breath=parseInt(prompt("enter breath"));
+
+    let rectangle=(length,breath)=> length*breath
+    document.write('<br> Area of Rectangle :' , rectangle(length,breath));
+
+    let height=parseInt(prompt("Enter Height"));
+    let base=parseInt(prompt("Enter base"));
+
+    let triangle=(height,base)=>0.5*height*base
+    document.write('<br> Area of Triangle :' , triangle(height,base));
+
+ </script>   
+
+</body>
+</html>
