@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="clock">
+        <div id="hour"></div>:
+        <div id="min"></div>:
+        <div id="sec"></div>
+    </div>
+
+    <script>
+        let sec = 0;
+        let min = 0;
+        let hour = 0;
+        function clock() {
+            console.log("Function called...")
+            if (sec == 59) {
+                min++;
+                sec =0;
+            }
+            document.getElementById("sec").innerHTML = ++sec;
+            if (min == 59) {
+                hour++;
+                min = 0;
+            }
+            document.getElementById("min").innerHTML = min;
+            if (hour == 24) {
+                hour = 0;
+            }
+            document.getElementById("hour").innerHTML = hour;
+        }
+        setInterval(clock , 1000)
+    </script>
+</body>
+
+</html>
