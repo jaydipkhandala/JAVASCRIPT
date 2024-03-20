@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" onkeypress="return validateAlphabets(event)">
+    <script>
+
+        function validateAlphabets(event) {
+            const charCode = event.which || event.keyCode;
+            if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+                return true; // Allow the key
+            } else {
+                return false; // Block the key
+            }
+        }
+
+
+        const inputElement = document.getElementById('myInput');
+        inputElement.addEventListener('keypress', validateAlphabets);
+
+
+
+    </script>
+</body>
+
+</html>
